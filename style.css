@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body{
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.contaner {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    background-color: #fff;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0, 0.1);
+}
+.contaner .left-side{
+    position: relative;
+    background-color: rgb(39, 39, 99);
+    padding: 40px;
+}
+.pro-text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* color: #fff; */
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.pro-text .image{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.pro-text .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pro-text h2 {
+    color: #fff;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+}
+.pro-text h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contect {
+    padding-top: 40px;
+}
+.contect-text{
+    color: #fff;
+    /* text-align:center; */
+    margin-bottom: 20px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+.contect ul{
+    position: relative;
+}
+.contect ul li{
+    position: relative;
+    list-style-type: none;
+    margin: 10px 0;
+    cursor: pointer;
+    color: #fff;
+}
+.contect ul li .icon{
+    display: inline-block;
+    width: 22px;
+    font-size: 18px;
+    color: skyblue;
+}
+.contect ul li .icon span{
+    letter-spacing: 1px;
+}
+.contect.education li {
+    margin-bottom: 20px;
+}
+.contect.education li h5{
+    font-weight: 400;
+    margin-bottom: 2px;
+}
+.contect.education li h4{
+    font-weight: 500;
+    font-size: 19px;
+}
+.contect.language .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: black;
+    display: block;
+    margin-top: 8px;
+    border-radius:50px;
+}
+.contect.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius:50px;
+    background: skyblue;
+}
+
+
+.contaner .right-side{
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 40px;
+}
+.right-side .about-me{
+    margin-bottom: 30px;
+}
+.about-me:last-child{
+    margin-bottom: 0px;
+}
+.about-text{
+    font-size: 2rem;
+    color: #03344b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+.about-me p{
+    color: rgb(45, 62, 80);
+    font-size: 20px;
+}
+.about-me .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+.about-me .box .year-comp{
+    min-width: 150px;
+}
+.about-me .box .year-comp h5{
+    font-size: 18px;
+    margin: 5px 0;
+    color: rgb(146, 137, 137);
+}
+.about-me .box .text h4{
+    font-size: 18px;
+    color: rgb(50, 118, 145);
+    margin-bottom: 4px;
+}
+.skill h2{
+    font-size: 2.1rem;
+    color: #03344b;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    margin-bottom: 15px;
+}
+.skill .box{
+    margin: 20px;
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.skill .box h4{
+    color: rgb(146, 137, 137);
+    font-size: 18px;
+}
+.skill .box .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: rgb(207, 193, 193);
+    display: block;
+    margin-top: 8px;
+    border-radius:50px;
+}
+.skill .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius:50px;
+    background: rgb(39, 39, 99);
+}
+.interest h2{
+    margin-top: 36px;
+}
+.interest ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.interest ul li{
+    list-style: none;
+    font-size: 19px;
+    margin: 5px 0;
+}
+.interest ul li i{
+    width: 40px;
+    font-size: 25px;
+    color: rgb(9, 176, 241);
+}
+
+/* responsive */
+@media (max-width: 1000px){
+    .contaner{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .skill .box{
+        grid-template-columns: 150px 1fr;
+    }
+}
+@media (max-width: 600px) {
+    .about-text {
+        text-align: center;
+    }
+    .skill h2{
+        text-align: center;
+    }
+    .interest h2{
+        text-align: left;
+    }
+    .about-me .box{
+        flex-direction: column;
+    }
+    .about-me .box .year-comp{
+        /* min-width: 150px; */
+        margin-bottom: 5px;
+    }
+    .skill .box{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
